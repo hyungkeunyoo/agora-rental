@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>아고라 홍보관 대관</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;background:#f6f8fb}
+    iframe{display:block;width:100%;height:100vh;border:0}
+    .error{font-family:sans-serif;max-width:760px;margin:70px auto;padding:20px}
+  </style>
+</head>
+<body>
+  <!-- 아래 src를 네 Apps Script /exec 주소로 바꿔 -->
+  <iframe
+    id="app"
+    src="YOUR_APPS_SCRIPT_WEBAPP_URL"
+    title="아고라 홍보관 대관 시스템"
+    allow="clipboard-write">
+  </iframe>
+  <script>
+    const f=document.getElementById('app');
+    if(f.getAttribute('src')==='YOUR_APPS_SCRIPT_WEBAPP_URL'){
+      document.body.innerHTML='<div class="error"><h2>Apps Script 웹앱 주소를 넣어줘</h2><p>github-index.html의 YOUR_APPS_SCRIPT_WEBAPP_URL을 배포된 /exec 주소로 교체하면 돼.</p></div>';
+    }
+  </script>
+</body>
+</html>
